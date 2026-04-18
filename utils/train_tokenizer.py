@@ -7,7 +7,16 @@ spm.SentencePieceTrainer.train(
     input="data/processed/sp_input.txt",  # 你的语料文件
     model_prefix="tokenizer",             # 输出模型前缀
     vocab_size=8000,                      # 词表大小
-    model_type="bpe"
+    model_type="bpe",
+    character_coverage=1.0,
+    pad_id=0,
+    unk_id=1,
+    bos_id=2,
+    eos_id=3,
+    pad_piece='<pad>',
+    unk_piece='<unk>',
+    bos_piece='<s>',
+    eos_piece='</s>'
 )
 
 # ====================== 2. 加载模型 ======================
